@@ -66,24 +66,27 @@
             gap: 24px;
         }
 
-        .project-card {
+        .project-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
             padding: 16px 0;
             border-bottom: 1px solid #f0f0f0;
+        }
+
+        .project-card a:hover .project-name {
+            color: #0066cc;
+        }
+
+        .project-card {
+            padding: 0;
         }
 
         .project-name {
             font-size: 1.1em;
             font-weight: 500;
             margin-bottom: 4px;
-        }
-
-        .project-name a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .project-name a:hover {
-            text-decoration: underline;
+            transition: color 0.2s;
         }
 
         .project-desc {
@@ -125,17 +128,17 @@
         
         <div class="projects">
             <div class="project-card">
-                <h3 class="project-name">
-                    <a href="https://github.com/jshachm/pi-rs" target="_blank">pi-rs</a>
-                </h3>
-                <p class="project-desc">基于pi-mono，rust轻量化版本</p>
+                <a href="https://github.com/jshachm/pi-rs" target="_blank">
+                    <h3 class="project-name">pi-rs</h3>
+                    <p class="project-desc">基于pi-mono，rust轻量化版本</p>
+                </a>
             </div>
 
             <div class="project-card">
-                <h3 class="project-name">
-                    <a href="https://github.com/jshachm/chronoh" target="_blank">chronoh</a>
-                </h3>
-                <p class="project-desc">遵循harness原则，长时运行agent任务的框架，集成pi-rs</p>
+                <a href="https://github.com/jshachm/chronoh" target="_blank">
+                    <h3 class="project-name">chronoh</h3>
+                    <p class="project-desc">遵循harness原则，长时运行agent任务的框架，集成pi-rs</p>
+                </a>
             </div>
         </div>
 
